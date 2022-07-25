@@ -31,11 +31,11 @@ Klikom na dugme 'Start new battle', resetujete igru vracate se na pocetnu stranu
 
 ### Clone the repository 
 
-   <p> git clone https://github.com/Nenadsavkic/battle_of_two_armies.php </p>
+   <p> git clone https://github.com/Nenadsavkic/battle_of_two_armies.git </p>
 
    ### Switch to the repository cloned folder
 
-   <p> example path:  PS C:\Users> cd FIFA-World-Cup-2019-Womens  </p>
+   <p> example path:  PS C:\Users> cd battle_of_two_armies  </p>
 
 ### Install all the dependencies using composer
 
@@ -55,7 +55,7 @@ Klikom na dugme 'Start new battle', resetujete igru vracate se na pocetnu stranu
    php artisan key:generate
    ```
 
-### Create database 'world_cup' in your local server (xamp), then run migration
+### Create database 'battle_two_armies' in your local server (xamp), then run migration
 ### Check the database connection in .env before migrating
 
    ```bash
@@ -69,14 +69,6 @@ Klikom na dugme 'Start new battle', resetujete igru vracate se na pocetnu stranu
    ```
 
 <p> You can now access the server at http://localhost:8000</p>
-
-
-<p> You can see returned JSON data on foloving links:
-    <br>
-    http://127.0.0.1:8000/matches-json
-    <br>
-    http://127.0.0.1:8000/teams-json
-</p>
 
 
 
