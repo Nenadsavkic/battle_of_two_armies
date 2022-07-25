@@ -6,7 +6,6 @@ use App\Models\Army1;
 use App\Models\Army1SpecialEvent;
 use App\Models\Army2;
 use App\Models\Army2SpecialEvent;
-use App\Models\Soldier;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -22,10 +21,12 @@ class ProjectController extends Controller
           'army1' => 'required'
        ]);
 
+       // Uzimamo N broj unetih vojnika koje treba da kreiramo za Armiju 1
        $number_of_soldiers = (int)$request->army1;
 
 
-
+       // Lupujemo N puta da kreiramo trazeni broj vojnika za armiju 1 sa osobinama koje ce biti
+       // kreirane random izmedju zadatih vrednosti.
        for ($i=0; $i < $number_of_soldiers; $i++) {
         $soldier = new Army1();
         $soldier->power = rand(50, 200);
@@ -36,7 +37,7 @@ class ProjectController extends Controller
 
 
         return redirect()->back()
-        ->with('message', 'You just created a '.$number_of_soldiers.' strong soldiers of Army 1');
+        ->with('message', 'You have just created '.$number_of_soldiers.' strong soldiers of Army 1');
 
      }
 
@@ -46,10 +47,12 @@ class ProjectController extends Controller
             'army2'=> 'required'
          ]);
 
+         // Uzimamo N broj unetih vojnika koje treba da kreiramo za Armiju 2
          $number_of_soldiers = (int)$request->army2;
 
 
-
+         // Lupujemo N puta da kreiramo trazeni broj vojnika za Armiju 2 sa osobinama koje ce biti
+         // kreirane random izmedju zadatih vrednosti.
          for ($i=0; $i < $number_of_soldiers; $i++) {
           $soldier = new Army2();
           $soldier->power = rand(50, 200);
@@ -60,7 +63,7 @@ class ProjectController extends Controller
 
 
          return redirect()->back()
-        ->with('message', 'You just created a '.$number_of_soldiers.' strong soldiers of Army 2');
+        ->with('message', 'You have just created '.$number_of_soldiers.' strong soldiers of Army 2');
 
     }
 
@@ -127,6 +130,8 @@ class ProjectController extends Controller
 
     }
 
+    // Resetujemo igru tako sto obrisemo sve vojnike iz tabeli i vratimo se na pocetnu stranu
+    // gde mozemo zapoceti novu igru
     public function resetBattle()
     {
         Army1::truncate();

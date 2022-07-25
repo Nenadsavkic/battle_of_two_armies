@@ -20,6 +20,8 @@ class CreateArmy2SpecialEventsTable extends Migration
             $table->float('value');
             $table->timestamps();
         });
+
+        // Specijalni dogadjaji
         DB::table('army2_special_events')->insert([
             [
                 'id' => 1,

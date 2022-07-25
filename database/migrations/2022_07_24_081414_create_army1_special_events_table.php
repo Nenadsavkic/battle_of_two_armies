@@ -21,6 +21,7 @@ class CreateArmy1SpecialEventsTable extends Migration
             $table->timestamps();
         });
 
+        // Specijalni dogadjaji
         DB::table('army1_special_events')->insert([
             [
                 'id' => 1,

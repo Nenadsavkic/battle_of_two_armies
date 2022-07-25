@@ -50,10 +50,9 @@
             <br>
             <h4>Army2 has total number of soldiers {{ $total2 }}  you can add more soldiers if you want.</h4>
 
+     {{-- Dugme 'Start battle ce se pojaviti tek kada su kreirane obe armije --}}
           @if ($total1 && $total2)
-
               <a href="{{ route('startBattle') }}" class="btn btn-success form-control mt-5">Start battle</a>
-
           @endif
 
         </div>
