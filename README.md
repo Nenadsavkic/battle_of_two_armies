@@ -24,4 +24,9 @@ dogadjaja koji se izvlaci nasumice (random) iz baze, takodje klikom na logo 'Bat
 Klikom na dugme 'Start new battle', resetujete igru vracate se na pocetnu stranu i brisete sve vojnike iz baze da biste zapoceli novu bitku. 
 
 
+INSTALACIJA
+
+
+
+
  
