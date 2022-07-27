@@ -69,6 +69,8 @@ class ProjectController extends Controller
 
     public function startBattle()
     {
+        // Samo ako je kliknuto na dugme 'Start battle' koje ima id 'subBtn' prikazace se rezulatat bitke
+        if(isset(request()->id)){
 
           $army1 = Army1::all();
           $army2 = Army2::all();
@@ -123,10 +125,14 @@ class ProjectController extends Controller
             $winner = "There is no winner in this battle";
          }
 
-
-
-        return view('battleResult', compact('army1','army2', 'event_army_1', 'event_army_2', 'total_strength_army1',
+         return view('battleResult', compact('army1','army2', 'event_army_1', 'event_army_2', 'total_strength_army1',
         'total_strength_army2', 'attack', 'winner'));
+
+        }else{
+            return redirect()->back();
+        }
+
+
 
     }
 

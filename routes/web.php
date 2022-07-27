@@ -22,7 +22,7 @@ Route::get('/login', [App\Http\Controllers\ProjectController::class, 'welcome'])
 Route::get('/register', [App\Http\Controllers\ProjectController::class, 'welcome'])->name('welcome');
 Route::get('/battle-result', [App\Http\Controllers\ProjectController::class, 'startBattle'])
 ->name('startBattle');
-Route::get('/reset-baattle', [App\Http\Controllers\ProjectController::class, 'resetBattle'])
+Route::get('/reset-battle', [App\Http\Controllers\ProjectController::class, 'resetBattle'])
 ->name('resetBattle');
 
 

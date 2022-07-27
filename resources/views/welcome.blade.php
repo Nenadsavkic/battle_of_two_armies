@@ -52,7 +52,7 @@
 
      {{-- Dugme 'Start battle ce se pojaviti tek kada su kreirane obe armije --}}
           @if ($total1 && $total2)
-              <a href="{{ route('startBattle') }}" class="btn btn-success form-control mt-5">Start battle</a>
+              <a id="subBtn" href="{{ route('startBattle') }}?id='subBtn'" class="btn btn-success form-control mt-5">Start battle</a>
           @endif
 
         </div>
