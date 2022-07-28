@@ -69,7 +69,7 @@ class ProjectController extends Controller
 
     public function startBattle()
     {
-        // Samo ako je kliknuto na dugme 'Start battle' koje ima id 'subBtn' prikazace se rezulatat bitke
+        // Samo ako je kliknuto na dugme 'Start battle' koje ima id 'subBtn' pokrenuce se bitka
         if(isset(request()->id)){
 
           $army1 = Army1::all();
@@ -109,9 +109,6 @@ class ProjectController extends Controller
           // Armija 1 krece prva u napad
 
          $attack = ($army1->count() < $army2->count())? 'Army 2 attack Huuurraaa!!!': 'Army 1 attack Huuurrraaa!!!';
-
-         // Special event
-
 
 
          // Pobednik bitke je onaj koji ima veci 'totalStrenght ili ukupnu snagu'
