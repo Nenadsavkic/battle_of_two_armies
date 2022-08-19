@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,22 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\ProjectController::class, 'welcome'])->name('welcome');
+Route::get('/', [ProjectController::class, 'welcome'])->name('welcome');
 
 Auth::routes(['register'=>false, 'login'=>false]);
 
-Route::get('/home', [App\Http\Controllers\ProjectController::class, 'welcome'])->name('welcome');
-Route::get('/login', [App\Http\Controllers\ProjectController::class, 'welcome'])->name('welcome');
-Route::get('/register', [App\Http\Controllers\ProjectController::class, 'welcome'])->name('welcome');
-Route::get('/battle-result', [App\Http\Controllers\ProjectController::class, 'startBattle'])
+Route::get('/home', [ProjectController::class, 'welcome'])->name('welcome');
+Route::get('/login', [ProjectController::class, 'welcome'])->name('welcome');
+Route::get('/register', [ProjectController::class, 'welcome'])->name('welcome');
+Route::get('/battle-result', [ProjectController::class, 'startBattle'])
 ->name('startBattle');
-Route::get('/reset-battle', [App\Http\Controllers\ProjectController::class, 'resetBattle'])
+Route::get('/reset-battle', [ProjectController::class, 'resetBattle'])
 ->name('resetBattle');
 
 
-Route::post('/create-army1', [App\Http\Controllers\ProjectController::class, 'createArmy1'])
+Route::post('/create-army1', [ProjectController::class, 'createArmy1'])
 ->name('createArmy1');
-Route::post('/create-army2', [App\Http\Controllers\ProjectController::class, 'createArmy2'])
+Route::post('/create-army2', [ProjectController::class, 'createArmy2'])
 ->name('createArmy2');
 
 
