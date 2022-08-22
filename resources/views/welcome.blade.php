@@ -23,7 +23,7 @@
             <form action="{{ route('createArmy1') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                  <label for="formGroupExampleInput">Enter a number of soldiers of Army1</label>
+                  <label for="army1">Enter a number of soldiers of Army1</label>
                   <input type="number" class="form-control" name="army1">
                 </div>
                 <button class=" btn btn-primary mt-3">Create Army 1</button>
@@ -33,7 +33,7 @@
             <form action="{{ route('createArmy2') }}" method="POST">
                 @csrf
                 <div class="form-group">
-                  <label for="formGroupExampleInput">Enter a number of soldiers of Army2</label>
+                  <label for="army2">Enter a number of soldiers of Army2</label>
                   <input type="number" class="form-control" name="army2">
                 </div>
                 <button class=" btn btn-primary mt-3">Create Army 2</button>
@@ -61,3 +61,5 @@
   </div>
 
 @endsection
+
+

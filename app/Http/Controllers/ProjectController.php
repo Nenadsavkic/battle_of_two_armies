@@ -17,6 +17,7 @@ class ProjectController extends Controller
 
     public function createArmy1(Request $request)
     {
+
        $request->validate([
           'army1' => 'required'
        ]);
@@ -63,7 +64,7 @@ class ProjectController extends Controller
 
 
          return redirect()->back()
-        ->with('message', 'You have just created '.$number_of_soldiers.' strong soldiers of Army 2');
+         ->with('message', 'You have just created '.$number_of_soldiers.' strong soldiers of Army 2');
 
     }
 
